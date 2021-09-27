@@ -1,8 +1,6 @@
+import styled from "styled-components";
 import React, { useState, useEffect } from "react"
 import { Api } from "../pages/Api"
-import Header from "../components/Header";
-import Main from "../components/Main"
-import Footer from "../components/Footer";
 
 export default function App() {
   const [info, setInfo] = useState([])
@@ -12,10 +10,14 @@ export default function App() {
   }, [])
 
   return (
-    <div>
-      <Header/>
-      <Main />
-      <Footer/>
-    </div>
+      <div>
+        {info.map(item => (
+          <div>
+            <p>Personagem: {item.name}</p>
+            <p>Ator: {item.actor}</p>
+            <img src={item.image} alt=""/> 
+          </div>
+        ))}
+      </div>
   )
 }
