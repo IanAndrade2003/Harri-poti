@@ -6,7 +6,7 @@ export default function App() {
 
   return (
       <div>
-        <h1>Bem vindo a Hogwarts</h1>
+        <h1>Bem vindo a Hogwarts!</h1>
       </div>
   )
 }
