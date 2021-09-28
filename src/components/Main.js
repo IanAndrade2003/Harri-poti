@@ -9,15 +9,30 @@ export default function App() {
     console.log(Api.get())
   }, [])
 
+  const Box = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+  `;
+
+  const BoxPerso = styled.div`
+    margin-left: 60px;
+    margin-bottom: 15px;
+    border: 4px solid #4ebdc1;
+  `;
+
+  const Paragraph = styled.p`
+    font-size: 14px;
+  `;
+
   return (
-      <div>
+      <Box>
         {info.map(item => (
-          <div>
+          <BoxPerso>
             <p>Personagem: {item.name}</p>
-            <p>Ator: {item.actor}</p>
-            <img src={item.image} alt=""/> 
-          </div>
+            <Paragraph>Ator: {item.actor}</Paragraph>
+            <img style={{ width: "250px", height: "350px" }} src={item.image} alt=""/> 
+          </BoxPerso>
         ))}
-      </div>
+      </Box>
   )
 }

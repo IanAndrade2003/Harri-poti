@@ -4,9 +4,14 @@ import React, { useState, useEffect } from "react"
 export default function App() {
   const [info, setInfo] = useState([])
 
+ const Box = styled.div`
+    display: flex;
+    justify-content: center;
+ `;
+
   return (
-      <div>
+      <Box>
         <h1>Bem vindo a Hogwarts!</h1>
-      </div>
+      </Box>
   )
 }
