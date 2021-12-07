@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Main from "../components/Main"
 import Footer from "../components/Footer";
 
+import { Link } from "gatsby"
 
 export default function App() {
   const [info, setInfo] = useState([])
@@ -14,6 +15,11 @@ export default function App() {
 
   return (
     <div>
+      <div>
+      <Link to="/">inicio</Link>
+      <Link to="/Sobre">Sobre</Link>
+      <Link to="/Contatos">Contatos</Link>
+      </div>
       <Header/>
       <Main />
       <Footer/>
